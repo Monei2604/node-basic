@@ -1,10 +1,7 @@
-async function main() {
-  const translate = require("@vitalets/google-translate-api");
+const _ = require('lodash')
 
-  const res = await translate("Tôi nói tiếng việt không rành", { to: "en" });
 
-  console.log(res.text); //=> I speak English
-  console.log(res.from.language.iso); //=> nl
-}
+const str = _.lowerCase('__FOO_BAR__');
+// => 'foo bar'
 
-main();
+console.log(str)
